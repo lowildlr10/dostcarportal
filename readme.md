@@ -1,27 +1,64 @@
-# Laravel PHP Framework
+# Installation and Configuration
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
-
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+1. Open command prompt or bash terminal.
+1. Go to the directory where the repository is being stored/cloned by using 
+   the "cd" command.
+   
+   example: 
+   ```
+   cd /var/www
+   cd C:\xampp\htdocs
+   ```
+        
+2. Clone this repository using "git clone <URL> <folder_name>" command
+   
+   example: 
+   ``` 
+   git clone https://github.com/lowildlr10/dostcarportal.git dostcarportal
+   ```
+   
+3. Navigate inside the cloned repository by using "cd" command
+   
+   example:
+   ```
+   cd dostcarportal
+   ```
+        
+4. Run this command "cp .env.examples .env" (Linux or MAC) or 
+   "copy .env.examples .env" or simply duplicate ".env.examples"
+   then rename it to ".env".
+  
+5. Open .env file by using the text editor or the terminal text 
+   editors (vim, nano, and etc.), then edit this fields APP_NAME,
+   APP_DEBUG, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and 
+   DB_PASSWORD
+    
+    example:
+    ```
+    APP_NAME="DOST-CAR Portal"
+    APP_DEBUG=false
+    
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=dostcarportal
+    DB_USERNAME=dostcarportal
+    DB_PASSWORD=dostcarportal
+    ```
+       
+ 6. Then run this following commands:
+ 
+    ```
+    "composer install"
+    "php artisan key:generate"
+    "php artisan migrate:refresh --seed"
+    "php artisan cache:clear"
+    "php artisan config:clear"
+    "php artisan view:clear"
+    ```
+      
+ 7. Access the site then login this admin credentials:
+ 
+    ```
+    Username: admin
+    Password: admin
+    ```
